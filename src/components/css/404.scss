@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "bold";
+  src: url("../../fonts/sarasa-fixed-sc-bold.ttf");
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../../fonts/sarasa-fixed-sc-regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#svg {
+  display: block;
+  font: 20em "bold";
+  width: 100%;
+  top: -70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 2;
+  position: absolute;
+}
+
+.text {
+  fill: rgb(140, 120, 180);
+  stroke: rgb(94, 69, 146);
+  stroke-dasharray: 0;
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+
+.font {
+  font-family: "bold";
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(94, 69, 146);
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  //In the absence of a width and height, the element's width and height are bracketed by the content
+  //solving the problem of centering the element.
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(255, 255, 255) 45%,
+    rgb(31, 13, 75) 45%,
+    rgb(31, 13, 75) 55%,
+    rgb(255, 255, 255) 55%
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    rgb(255, 255, 255) 45%,
+    rgb(31, 13, 75) 45%,
+    rgb(31, 13, 75) 55%,
+    rgb(255, 255, 255) 55%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgb(255, 255, 255) 45%,
+    rgb(31, 13, 75) 45%,
+    rgb(31, 13, 75) 55%,
+    rgb(255, 255, 255) 55%
+  );
+  background: linear-gradient(
+    45deg,
+    rgb(255, 255, 255) 45%,
+    rgb(31, 13, 75) 45%,
+    rgb(31, 13, 75) 55%,
+    rgb(255, 255, 255) 55%
+  );
+  -o-background-size: 20px 20px;
+  background-size: 20px 20px;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.1;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 0px;
+  color: #fff;
+  left: 40%;
+  right: 0;
+  top: 62%;
+  margin: auto;
+  font-family: "regular";
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  z-index: 2;
+}
+
+.btn {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: rgb(140, 120, 180);
+
+  &:hover {
+    color: rgb(94, 69, 146);
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+
+    /*Button horizontal thickness*/
+    width: 0;
+    background: rgb(94, 69, 146);
+    -webkit-transition: 800ms ease all;
+    -o-transition: 800ms ease all;
+    -moz-transition: 800ms ease all;
+    transition: 800ms ease all;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+
+    /*Button horizontal thickness*/
+    width: 0;
+    background: rgb(94, 69, 146);
+    -webkit-transition: 800ms ease all;
+    -o-transition: 800ms ease all;
+    -moz-transition: 800ms ease all;
+    transition: 800ms ease all;
+    right: inherit;
+    top: inherit;
+    left: 0;
+    top: 4rem;
+    bottom: 0;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      width: 100%;
+      -webkit-transition: 800ms ease all;
+      -o-transition: 800ms ease all;
+      -moz-transition: 800ms ease all;
+      transition: 800ms ease all;
+    }
+  }
+}
+
+//Web page adaption
+
+//Width < 768px
+@media screen and (max-width: 768px) {
+  #svg {
+    font: 35em "bold";
+    top: -35%;
+  }
+  .font {
+    font-size: 3rem;
+    top: 51%;
+    left: 10%;
+    -webkit-transform: translate(10%, -40%);
+    -moz-transform: translate(10%, -40%);
+    -ms-transform: translate(10%, -40%);
+    -o-transform: translate(10%, -40%);
+    transform: translate(10%, -40%);
+  }
+  .custom-btn {
+    top: 60%;
+    left: 50%;
+  }
+}
+
+//Width [768px,992px)
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #svg {
+    font: 25em "bold";
+    top: -40%;
+  }
+  .font {
+    font-size: 5rem;
+
+    top: 57%;
+    left: 10%;
+    -webkit-transform: translate(10%, -40%);
+    -moz-transform: translate(10%, -40%);
+    -ms-transform: translate(10%, -40%);
+    -o-transform: translate(10%, -40%);
+    transform: translate(10%, -40%);
+  }
+  .custom-btn {
+    left: 65%;
+    top: 65%;
+  }
+}
+
+//Width [992px, 1200px)
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #svg {
+    font: 25em "bold";
+    top: -40%;
+  }
+  .font {
+    font-size: 5rem;
+
+    top: 60%;
+    left: 15%;
+    -webkit-transform: translate(15%, -40%);
+    -moz-transform: translate(15%, -40%);
+    -ms-transform: translate(15%, -40%);
+    -o-transform: translate(15%, -40%);
+    transform: translate(15%, -40%);
+  }
+  .custom-btn {
+    left: 50%;
+    top: 67%;
+  }
+}
+
+//Width > 2560px
+@media screen and (min-width: 2560px) {
+  .font {
+    font-size: 8rem;
+  }
+}
+
+//Width to height ratio less than or equal to 9:16
+@media screen and (max-aspect-ratio: 9/16) {
+  #svg {
+    font: 45em "bold";
+    top: -30%;
+  }
+  .font {
+    font-size: 2.5rem;
+    top: 50%;
+    left: 10%;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+  }
+  .custom-btn {
+    left: 50%;
+    top: 60%;
+  }
+}
+
+//Width to height ratio greater than or equal to 16:9
+@media screen and (min-aspect-ratio: 16/9) {
+  #svg {
+    font: 20em "bold";
+    top: -50%;
+  }
+  .font {
+    top: 55%;
+    left: 30%;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .custom-btn {
+    left: 50%;
+    top: 70%;
+  }
+}
+
+@media (any-hover: hover) {
+  .btn {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: rgb(140, 120, 180);
+
+    &:hover {
+      color: rgb(94, 69, 146);
+      background: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+
+      /*Button horizontal thickness*/
+      width: 0;
+      background: rgb(94, 69, 146);
+      -webkit-transition: 800ms ease all;
+      -o-transition: 800ms ease all;
+      -moz-transition: 800ms ease all;
+      transition: 800ms ease all;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+
+      /*Button horizontal thickness*/
+      width: 0;
+      background: rgb(94, 69, 146);
+      -webkit-transition: 800ms ease all;
+      -o-transition: 800ms ease all;
+      -moz-transition: 800ms ease all;
+      transition: 800ms ease all;
+      right: inherit;
+      top: inherit;
+      left: 0;
+      top: 4rem;
+      bottom: 0;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        width: 100%;
+        -webkit-transition: 800ms ease all;
+        -o-transition: 800ms ease all;
+        -moz-transition: 800ms ease all;
+        transition: 800ms ease all;
+      }
+    }
+  }
+}

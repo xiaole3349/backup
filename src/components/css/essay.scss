@@ -1,0 +1,103 @@
+.essay-control {
+  width: 55%;
+  height: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 3rem;
+  position: absolute;
+  background-color: rgb(140, 120, 180);
+  -webkit-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -moz-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.essay-square {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  border-radius: 10%;
+  z-index: -1;
+  top: 17%;
+  left: 50%;
+  background-color: rgba(140, 120, 180, 0.5);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+//Web page adaption
+
+//Width < 768px
+@media screen and (max-width: 768px) {
+  .essay-control {
+    width: 80%;
+    height: 70%;
+    left: -2%;
+  }
+  .essay-square {
+    width: 25rem;
+    height: 25rem;
+    top: 19%;
+    left: 55%;
+  }
+}
+
+//Width [768px,992px)
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .essay-control {
+    width: 70%;
+  }
+  .essay-square {
+    width: 40rem;
+    height: 40rem;
+    top: 19%;
+    left: 42%;
+  }
+}
+
+//Width [992px, 1200px)
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .essay-control {
+    width: 65%;
+  }
+  .essay-square {
+    top: 18%;
+  }
+}
+
+//Width > 2560px
+@media screen and (min-width: 2560px) {
+  .essay-square {
+    width: 70rem;
+    height: 70rem;
+  }
+}
+
+//Width to height ratio less than or equal to 9:16
+@media screen and (max-aspect-ratio: 9/16) {
+  .essay-control {
+    width: 80%;
+    height: 50%;
+    left: -2%;
+  }
+  .essay-square {
+    width: 16rem;
+    height: 16rem;
+    top: 25%;
+    left: 43%;
+  }
+}
+
+//Width to height ratio greater than or equal to 16:9
+@media screen and (min-aspect-ratio: 16/9) and (max-width: 1100px) {
+  .essay-square {
+    top: 17%;
+    left: 50%;
+  }
+}

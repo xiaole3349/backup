@@ -1,0 +1,286 @@
+/* **Adaptive value, please do not modify unless special circumstances** */
+
+.ss {
+  opacity: 1;
+}
+
+.swiper {
+  --swiper-navigation-color: rgb(140, 120, 180);
+}
+
+.my-button-disabled {
+  opacity: 0;
+}
+
+/* --------------------------------------------------------------------- */
+
+.img {
+  position: relative;
+  height: 100%;
+}
+
+.essay-img {
+  left: 60%;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  height: 100%;
+  border-radius: 3rem;
+}
+
+.swiper-text {
+  width: 55%;
+  height: 70%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  border-radius: 3rem;
+  position: absolute;
+  -webkit-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -moz-transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: 0.5s cubic-bezier(0.33, 0.66, 0.66, 1);
+
+  h3 {
+    margin-left: 7%;
+    font-family: "bold";
+    margin-top: 8%;
+    font-weight: bolder;
+    font-size: 5rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  p {
+    width: 50%;
+    line-height: 3rem;
+    margin-left: 7%;
+    font-family: "regular";
+    margin-top: 18%;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  &:hover {
+    background-color: rgb(59, 46, 87);
+  }
+}
+
+.readme {
+  font-family: "bold";
+  color: white;
+  font-size: 2rem;
+  margin-left: 40%;
+  margin-top: 47%;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+
+.swiper-text:hover {
+  .readme {
+    display: inline-block;
+  }
+
+  p {
+    text-decoration: underline;
+  }
+}
+
+//Web page adaption
+
+//Width < 768px
+@media screen and (max-width: 768px) {
+  .essay-img {
+    left: 65%;
+    width: 35%;
+  }
+  .swiper-text {
+    width: 80%;
+    height: 70%;
+    left: -2%;
+    h3 {
+      margin-top: 7%;
+      font-size: 4rem;
+    }
+    p {
+      width: 55%;
+      height: 35%;
+      line-height: 2rem;
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+  }
+  .readme {
+    font-size: 2rem;
+    margin-left: 40%;
+    margin-top: 40% !important;
+  }
+  #swiper-phone {
+    height: 50% !important;
+  }
+  #swiper-button-prev {
+    padding: 97% 1%;
+  }
+  #swiper-button-next {
+    padding: 97% 1%;
+  }
+}
+
+//Width [768px,992px)
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .readme {
+    font-size: 2.5rem;
+    margin-left: 37%;
+    margin-top: 55% !important;
+  }
+
+  .swiper-text {
+    width: 70%;
+    p {
+      line-height: 3.5rem;
+      font-size: 2rem;
+    }
+
+    h3 {
+      margin-top: 5%;
+      font-size: 6rem;
+    }
+  }
+}
+
+//Width [992px, 1200px)
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .readme {
+    font-size: 2.5rem;
+    margin-left: 37%;
+    margin-top: 50%;
+  }
+
+  .swiper-text {
+    width: 65%;
+    p {
+      line-height: 3.5rem;
+      font-size: 2rem;
+    }
+
+    h3 {
+      margin-top: 5%;
+      font-size: 6rem;
+    }
+  }
+}
+
+//Width > 2560px
+@media screen and (min-width: 2560px) {
+  .readme {
+    font-size: 4rem !important;
+
+    margin-top: 45% !important;
+  }
+
+  .swiper-text {
+    p {
+      line-height: 5rem !important;
+      font-size: 3rem !important;
+    }
+
+    h3 {
+      font-size: 10rem !important;
+    }
+  }
+}
+
+//Width to height ratio less than or equal to 9:16
+@media screen and (max-aspect-ratio: 9/16) {
+  .essay-img {
+    left: 65%;
+    width: 35%;
+  }
+  .swiper-text {
+    width: 80%;
+    height: 50%;
+    left: -2%;
+    h3 {
+      margin-top: 5%;
+      font-size: 2.5rem;
+    }
+    p {
+      width: 55%;
+      height: 35%;
+      line-height: 2rem;
+      font-weight: bolder;
+      font-size: 12px;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .readme {
+    font-size: 1rem;
+  }
+  #swiper-phone {
+    height: 50% !important;
+  }
+  #swiper-button-prev {
+    margin-left: -3%;
+    padding: 93% 1%;
+  }
+  #swiper-button-next {
+    margin-right: -3%;
+    padding: 93% 1%;
+  }
+}
+
+//Width to height ratio greater than or equal to 16:9
+@media screen and (min-aspect-ratio: 16/9) and (max-width: 1100px) {
+}
+@media (any-hover: hover) {
+  .swiper-text {
+    &:hover {
+      background-color: rgb(59, 46, 87);
+    }
+  }
+  .swiper-text:hover {
+    .readme {
+      display: inline-block;
+    }
+
+    p {
+      text-decoration: underline;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .readme {
+    font-size: 3rem;
+    margin-left: 40%;
+    margin-top: 43%;
+  }
+
+  .swiper-text {
+    p {
+      line-height: 3.5rem;
+      font-size: 2.7rem;
+    }
+
+    h3 {
+      margin-top: 7%;
+      font-size: 7rem;
+    }
+  }
+}

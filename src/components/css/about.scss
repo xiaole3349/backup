@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "semibold";
+  src: url("../../fonts/sarasa-fixed-sc-semibold.ttf");
+}
+
+.wrapper {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 8ch;
+  -webkit-animation: typing 2s steps(8), blink 0.5s step-end infinite alternate;
+  -moz-animation: typing 2s steps(8), blink 0.5s step-end infinite alternate;
+  -o-animation: typing 2s steps(8), blink 0.5s step-end infinite alternate;
+  animation: typing 2s steps(8), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: "semibold";
+  font-size: 7em;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-moz-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-o-keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

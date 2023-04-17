@@ -1,3 +1,5 @@
+<h4 align="right"><strong>English</strong> | <a href="https://github.com/xiaole3349/backup/blob/master/README_CN.md">简体中文</a></h4>
+
 <div align="center">
  <img  src="./src/images/logo.png" height="20%" width="20%" />
  <h1>Official site for beatosion.com</h1>
@@ -7,6 +9,9 @@
  <img src="https://img.shields.io/badge/node-16.5.0-green" />
 </div>
 
+## Notes:
+This item is a backup of an earlier development version.
+
 ## Introduction
 
 - This is official site for beatosion.com that provides professional high-precision motion capture technology solutions based on artificial intelligence sign recognition.
@@ -14,6 +19,8 @@
 - This project is developed based on [gatsby](https://www.gatsbyjs.com/).
 
 ## Installation
+
+### macOS:
 
 1.Install `nvm`:
 
@@ -41,16 +48,74 @@ $ npm install -g yarn
 ```bash
 $ yarn global add gatsby-cli
 ```
+### windows:
+
+1.Install [nvm-windows](https://github.com/coreybutler/nvm-windows)
+
+2.Then when you run nvm:
+```bash
+$ nvm use
+
+Found '/path/to/beatosion-site/.nvmrc' with version <16.5.0>
+Now using node v16.5.0 (npm v7.19.1)
+```
+3.Install `yarn`:
+
+```bash
+$ npm install -g yarn
+```
+
+4.Install `gatsby-cli`:
+
+```bash
+$ yarn global add gatsby-cli
+```
+
+### Linux:
+
+1.Install [nvm](https://github.com/nvm-sh/nvm)
+
+2.Then when you run nvm:
+```bash
+$ nvm use
+
+Found '/path/to/beatosion-site/.nvmrc' with version <16.5.0>
+Now using node v16.5.0 (npm v7.19.1)
+```
+3.Install `yarn`:
+
+```bash
+$ npm install -g yarn
+```
+
+4.Install `gatsby-cli`:
+
+```bash
+$ yarn global add gatsby-cli
+```
+
+### If you don't want to use nvm
+
+1. Install [node.js](https://node.js)
+
+2. Install `gatsby-cli`:
+
+```bash
+$ npm install -g gatsby-cli
+```
+
 
 ## Usage
 
-Run `beatosion-site` in your local machine:
+Run this repository in your local machine:
 
 ```bash
-git clone git@git.beatosion.cn:web-designer/beatosion-site.git
+git clone https://github.com/xiaole3349/backup.git
+
+cd backup
 
 # Project setup
-yarn install
+yarn install 
 
 # Compiles and hot-reloads for development
 yarn develop
@@ -58,9 +123,22 @@ yarn develop
 # Compiles and minifies for production
 yarn build
 yarn serve
+
+
+# if you dosen't using nvm
+
+# Project setup
+npm install ----legacy-peer-deps
+
+# Compiles and hot-reloads for development
+gatsby develop
+
+# Compiles and minifies for production
+gatsby build
+gatsby serve
 ```
 
-The default startup link is `http://localhost:9000/`
+The default startup link is `http://localhost:8000/`
 
 ## Layout
 

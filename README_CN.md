@@ -121,7 +121,7 @@ $ npm install -g gatsby-cli
 在本地运行 `beatosion-site` :
 
 ```bash
-git clone git@git.beatosion.cn:web-designer/beatosion-site.git
+git clone https://github.com/xiaole3349/backup.git
 
 # 项目安装
 yarn install
